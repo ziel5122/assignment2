@@ -1,3 +1,4 @@
-edu/csumb/cst438fa16hello/rest/HelloApplication.class
-edu/csumb/cst438fa16hello/rest/HelloService.class
-edu/csumb/cst438fa16hello/DayOfWeek.class
+edu/csumb/assignment2/QuestionsAnswers.class
+edu/csumb/assignment2/DayOfWeek.class
+edu/csumb/assignment2/rest/QuestionsAnswersApplication.class
+edu/csumb/assignment2/rest/QuestionsAnswersService.class

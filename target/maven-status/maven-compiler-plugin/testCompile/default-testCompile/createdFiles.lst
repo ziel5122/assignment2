@@ -1,2 +1,3 @@
-edu/csumb/cst438fa16hello/DayOfWeekTest.class
-edu/csumb/cst438fa16hello/rest/HelloServiceTest.class
+edu/csumb/assignment2/DayOfWeekTest.class
+edu/csumb/assignment2/QuestionsAnswersTest.class
+edu/csumb/assignment2/rest/QuestionsAnswersServiceTest.class

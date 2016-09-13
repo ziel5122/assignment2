@@ -1,0 +1,41 @@
+<!doctype html>
+<head>
+<title>QuestionsAnswers</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+<body>
+
+<div>
+  <div id="question">
+    <!-- question goes here -->
+  </div>
+  <input id="answer" type="text" />
+  <button onclick="testAnswer()">Submit</button>
+</div>
+<div id="outcome">
+  <!-- outcome goes here -->
+</div>
+<script>
+function randomQuestion() {
+  $.get("/rest/randomquestion", {}, function(thequestion) {
+    $("#question").text(thequestion);
+  })
+  .fail(function(jqXHR, textStatus, errorThrown) {
+    $("#question").text(textStatus + ": " + errorThrown);
+  });
+};
+
+function testAnswer() {
+  $.get("/rest/testanswer", {question: $("#question").text(), answer: $("#answer").val()}, function(theoutcome) {
+    $("#outcome").text(theoutcome);
+  })
+  .fail(function(jqXHR, textStatus, errorThrown) {
+    $("#question").text(textStatus + ": " + errorThrown);
+  }); 
+};
+
+randomQuestion();
+</script>
+
+</body>
+</html>

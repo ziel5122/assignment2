@@ -4,10 +4,11 @@ Run
 
 and then
 
-    curl http://localhost:8080/rest/hello?name=yo
+	curl http://cst438webapp-env.us-west-1.elasticbeanstalk.com/rest/randomquestion
+
 
 or
 
-    curl -v http://localhost:8080/rest/hello?name=
+	curl 'http://cst438webapp-env.us-west-1.elasticbeanstalk.com/rest/testanswer?question=What%20is%20the%20last%20name%20of%20the%20philosopher%20famous%20for%20writing:%20"I%20think,%20therefore%20I%20am"?&answer=decartes'
 
-or load <http://localhost:8080/hello.html> in a browser
+or load <http://cst438webapp-env.us-west-1.elasticbeanstalk.com/qa.html> in a browser
