@@ -28,8 +28,9 @@ public class QuestionsAnswersService {
     public Response testanswer(
       @QueryParam("question") String question,
       @QueryParam("answer") String answer) {
-      System.out.println(question);
-      System.out.println("answer" + answer);
+      if (answer == null || answer.isEmpty()) {
+            return Response.status(Response.Status.BAD_REQUEST).build();
+      }
       boolean right = qa.testAnswer(question, answer);
       if (right)
 	return Response.ok("CORRECT").build();
