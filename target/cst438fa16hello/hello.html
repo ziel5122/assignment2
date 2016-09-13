@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+<title>Hello</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+<body>
+
+<div>
+  What's your name?
+  <input id="name" type="text" />
+  <button onclick="greet()">Submit</button>
+</div>
+<div id="greet">
+  <!-- greeting goes here -->
+</div>
+
+<script>
+function greet() {
+  var thename = $("#name").val();
+  $.get("/rest/hello", { name: thename }, function(thehello) {
+      $("#greet").text(thehello);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+       $("#greet").text(textStatus + ": " + errorThrown);
+     });
+};
+</script>
+
+</body>
+</html>
